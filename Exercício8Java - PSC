@@ -1,0 +1,17 @@
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner input = new Scanner(System.in);
+
+        System.out.print("Quanto você recebe por hora trabalhada? ");
+        double valorHora = input.nextDouble();
+
+        System.out.print("Quantas horas trabalhas você tem neste mês: ");
+        int horasTrabalhadas = input.nextInt();
+
+        double salario = valorHora * horasTrabalhadas;
+
+        System.out.println("O salário deste mês é: R$" + salario);
+    }
+}
