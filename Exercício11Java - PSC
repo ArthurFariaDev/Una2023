@@ -1,0 +1,38 @@
+import java.util.Scanner;
+
+public class Main {
+
+    public static void main(String[] args) {
+        
+        Scanner input = new Scanner(System.in);
+        
+        System.out.print("Digite o primeiro número inteiro: ");
+        int num1 = input.nextInt();
+        
+        System.out.print("Digite o segundo número inteiro: ");
+        int num2 = input.nextInt();
+        
+        double num3 = 0;
+        boolean valido = false;
+        do {
+            System.out.print("Digite o número real: ");
+            if (input.hasNextDouble()) {
+                num3 = input.nextDouble();
+                valido = true;
+            } else {
+                System.out.println("Valor inválido! Digite um número real.");
+                input.next();
+            }
+        } while (!valido);
+        
+        double produto = (num1 * 2) * (num2 / 2.0);
+        double soma = (num1 * 3) + num3;
+        double cubo = Math.pow(num3, 3);
+        
+        System.out.printf("O produto do dobro do primeiro número com metade do segundo número é: %.2f%n", produto);
+        System.out.printf("A soma do triplo do primeiro número com o terceiro número é: %.2f%n", soma);
+        System.out.printf("O terceiro número elevado ao cubo é: %.2f%n", cubo);
+        
+        input.close();
+    }
+}
