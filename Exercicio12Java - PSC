@@ -1,0 +1,16 @@
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner input = new Scanner(System.in);
+
+        System.out.print("Digite a sua altura em metros: ");
+        double altura = input.nextDouble();
+
+        double pesoIdeal = (72.7 * altura) - 58;
+
+        System.out.printf("O seu peso ideal é %.2f kg.%n", pesoIdeal);
+
+        input.close();
+    }
+}
