@@ -1,0 +1,26 @@
+import java.util.Scanner;
+
+public class Main {
+
+    public static void main(String[] args) {
+        
+        Scanner input = new Scanner(System.in);
+        
+        System.out.print("Digite o peso (em kg) dos peixes pescados: ");
+        double peso = input.nextDouble();
+        
+        double excesso = peso - 50.0;
+        double multa = excesso > 0 ? excesso * 4.0 : 0.0;
+        
+        System.out.printf("Peso dos peixes: %.2f kg%n", peso);
+        
+        if (excesso > 0) {
+            System.out.printf("Excesso de peso: %.2f kg%n", excesso);
+            System.out.printf("Valor da multa a ser paga: R$ %.2f%n", multa);
+        } else {
+            System.out.println("Não houve excesso de peso.");
+        }
+        
+        input.close();
+    }
+}
