@@ -1,0 +1,19 @@
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner input = new Scanner(System.in);
+
+        System.out.print("Digite o tamanho do arquivo em MB: ");
+        double tamanhoArquivo = input.nextDouble();
+
+        System.out.print("Digite a velocidade do link de Internet em Mbps: ");
+        double velocidadeInternet = input.nextDouble();
+
+        double tempoDownloadMinutos = (tamanhoArquivo) / (velocidadeInternet * 60);
+
+        System.out.printf("O tempo aproximado de download é de %.2f minutos.", tempoDownloadMinutos);
+
+        input.close();
+    }
+}
